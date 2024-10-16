@@ -3,10 +3,10 @@ package by.sakhdanil.t1_tomcat;
 import by.sakhdanil.t1_tomcat.repository.Repository;
 import by.sakhdanil.t1_tomcat.repository.RepositoryInMemory;
 
-public class MangerRep {
+public class ManagerRep {
     private final Repository data;
 
-    public MangerRep() {
+    public ManagerRep() {
         this.data = new RepositoryInMemory();
         data.addPhrase("Hi Bro");
         data.addPhrase("U are good");

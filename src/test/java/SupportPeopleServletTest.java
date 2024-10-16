@@ -1,9 +1,8 @@
-import by.sakhdanil.t1_tomcat.MangerRep;
+import by.sakhdanil.t1_tomcat.ManagerRep;
 import by.sakhdanil.t1_tomcat.SuportPeopleServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,15 +20,15 @@ public class SupportPeopleServletTest {
     private HttpServletResponse response;
     private SuportPeopleServlet servlet;
     private StringWriter stringWriter;
-    private MangerRep mangerRep;
+    private ManagerRep managerRep;
 
     @BeforeEach
     public void setUp() throws IOException {
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
-        mangerRep = mock(MangerRep.class);
+        managerRep = mock(ManagerRep.class);
         stringWriter = new StringWriter();
-        servlet = new SuportPeopleServlet(mangerRep);
+        servlet = new SuportPeopleServlet(managerRep);
 
         PrintWriter writer = new PrintWriter(stringWriter);
 
@@ -41,11 +40,11 @@ public class SupportPeopleServletTest {
     @Test
     public void test_get_servlet() throws ServletException, IOException {
         String testPhrase = "test";
-        doReturn(testPhrase).when(this.mangerRep).getPhrase();
+        doReturn(testPhrase).when(this.managerRep).getPhrase();
 
         this.servlet.doGet(request, response);
 
-        verify(mangerRep, times(1)).getPhrase();
+        verify(managerRep, times(1)).getPhrase();
         assertEquals(testPhrase, stringWriter.toString());
 
     }
@@ -56,13 +55,13 @@ public class SupportPeopleServletTest {
         String testPhrase = "test";
         String testPhrase2 = "Good test";
 
-        doReturn(testPhrase2).when(this.mangerRep).addPhrase(testPhrase);
+        doReturn(testPhrase2).when(this.managerRep).addPhrase(testPhrase);
         doReturn(testPhrase).when(this.request).getParameter("Phrase");
 
 
         this.servlet.doPost(request, response);
 
-        verify(mangerRep, times(1)).addPhrase(testPhrase);
+        verify(managerRep, times(1)).addPhrase(testPhrase);
         assertEquals(testPhrase2, stringWriter.toString());
     }
 
