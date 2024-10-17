@@ -6,6 +6,7 @@ import by.sakhdanil.t1_tomcat.applicationContext.configuration.ManagerConfigurat
 import org.reflections.Reflections;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.*;
 
 public class ApplicationContext {
@@ -29,22 +30,22 @@ public class ApplicationContext {
             }
         }).toList();
 
-        for (var bean : list) {
-            beans.put(bean.getClass().getSimpleName(), bean);
-            System.out.println(bean.getClass().getSimpleName());
-        }
-        var test = beans.get("ManagerConfiguration");
-        var methods = Arrays.stream(test.getClass().getMethods())
-                .filter(method -> method.isAnnotationPresent(Instance.class)).toList();
 
-        for (var method : methods) {
-            method.invoke(test);
+        for (Object bean : list) {
+            Arrays.stream(bean.getClass().getMethods())
+                    .filter(method -> method.isAnnotationPresent(Instance.class))
+                    .forEach(method -> {
+                        try {
+                            beans.put(method.getName(), method.invoke(bean));
+                        } catch (IllegalAccessException | InvocationTargetException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
         }
-
 
     }
 
     public <T> T getBean(String name) {
-        return Optional.ofNullable((T) beans.get(name)).orElseThrow();
+        return (T) beans.get(name);
     }
 }

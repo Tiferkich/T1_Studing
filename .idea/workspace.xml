@@ -9,17 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="843d4271-c88e-4314-96c3-63c6d3dd84a1" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/Instance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/ManagerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ApplicationContextTest.java" afterDir="false" />
+    <list default="true" id="843d4271-c88e-4314-96c3-63c6d3dd84a1" name="Changes" comment="add ApplicationContext">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/MangerRep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/ManagerRep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/SuportPeopleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/SuportPeopleServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SupportPeopleServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SupportPeopleServletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/ManagerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/configuration/ManagerConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +31,33 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Tiferkich"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tiferkich&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Tiferkich/T1_Studing.git",
-    "accountId": "ca96d6ad-e75c-4cff-8947-fb721a5050a7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Tiferkich/T1_Studing.git&quot;,
+    &quot;accountId&quot;: &quot;ca96d6ad-e75c-4cff-8947-fb721a5050a7&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -81,7 +88,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class.executor": "Run",
+    "JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class.executor": "Debug",
+    "JUnit.SupportPeopleServletTest.test_get_servlet.executor": "Run",
     "JUnit.SupportPeopleServletTest.test_post_servlet.executor": "Run",
     "Maven.T1_Tomcat [deploy].executor": "Run",
     "Maven.T1_Tomcat [package].executor": "Run",
@@ -100,12 +108,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class">
+  <component name="RunManager" selected="JUnit.SupportPeopleServletTest.test_get_servlet">
     <configuration name="ApplicationContextTest.app_cont_should_return_instance_by_class" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="T1_Tomcat" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ApplicationContextTest" />
       <option name="METHOD_NAME" value="app_cont_should_return_instance_by_class" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SupportPeopleServletTest.test_get_servlet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T1_Tomcat" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SupportPeopleServletTest" />
+      <option name="METHOD_NAME" value="test_get_servlet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,14 +150,16 @@
     </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.SupportPeopleServletTest.test_get_servlet" />
       <item itemvalue="JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class" />
       <item itemvalue="JUnit.SupportPeopleServletTest.test_post_servlet" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.SupportPeopleServletTest.test_get_servlet" />
         <item itemvalue="JUnit.SupportPeopleServletTest.test_post_servlet" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.ApplicationContextTest.app_cont_should_return_instance_by_class" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +181,8 @@
       <updated>1729089925717</updated>
       <workItem from="1729089926798" duration="6428000" />
       <workItem from="1729098597543" duration="3976000" />
-      <workItem from="1729116349186" duration="4791000" />
+      <workItem from="1729116349186" duration="5041000" />
+      <workItem from="1729184312192" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -171,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729118086815</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add ApplicationContext">
+      <option name="closed" value="true" />
+      <created>1729121882056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729121882056</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,18 +208,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/sakhdanil/t1_tomcat/applicationContext/ApplicationContext.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add ApplicationContext" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ApplicationContext" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/T1_Tomcat$Tomcat_10_1_30.ic" NAME="Tomcat 10.1.30 Coverage Results" MODIFIED="1729094120153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
